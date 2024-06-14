@@ -21,7 +21,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
             <Link
               key={link.route}
               href={link.route}
-              className="flex-center flex-col gap-2"
+              className="flex-center flex-col gap-2 active:scale-90 duration-150 ease-in-out transition-all"
             >
               <li className="flex-center w-fit rounded-full bg-white p-4">
                 <Image src={link.icon} alt="image" width={24} height={24} />
@@ -33,7 +33,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
       </section>
 
       <section className="sm:mt-12">
-        <Collection 
+        <Collection
           hasSearch={true}
           images={images?.data}
           totalPages={images?.totalPage}

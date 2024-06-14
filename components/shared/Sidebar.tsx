@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <aside className="hidden h-screen w-64 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex scrollbar-hide">
       <div className="flex size-full flex-col gap-4 ">
-        <Link href="/" className="flex items-center gap-2 md:py-2 ">
+        <Link href="/" className="flex items-center gap-2 md:py-2 active:scale-90 transition-all duration-200 ease-in-out">
           <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
         </Link>
 
@@ -24,7 +24,7 @@ const Sidebar = () => {
                 const isActive = link.route === pathname
 
                 return (
-                  <li key={link.route} className={`flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner group  ${
+                  <li key={link.route} className={`flex-center active:scale-90 duration-150 ease-in-out p-16-semibold w-full whitespace-nowrap rounded-full bg-cover transition-all  hover:bg-purple-100 hover:shadow-inner group  ${
                     isActive ? 'bg-purple-gradient text-white' : 'text-gray-700'
                   }`}>
                     <Link className="sidebar-link" href={link.route}>
@@ -48,7 +48,7 @@ const Sidebar = () => {
                 const isActive = link.route === pathname
 
                 return (
-                  <li key={link.route} className={`flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner  group ${
+                  <li key={link.route} className={`flex-center active:scale-90 duration-150 ease-in-out p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner  group ${
                     isActive ? 'bg-purple-gradient text-white' : 'text-gray-700'
                   }`}>
                     <Link className="sidebar-link" href={link.route}>
@@ -76,7 +76,7 @@ const Sidebar = () => {
             </Button>
           </SignedOut>
         </nav>
-        <div className=" justify-center cursor-pointer gap-2 px-4 pt-3 pb-2">
+        <div className=" justify-center cursor-pointer gap-2 px-4 pt-3 pb-2 outline-none ring-0">
                 <UserButton afterSignOutUrl='/' showName />
               </div>
       </div>
