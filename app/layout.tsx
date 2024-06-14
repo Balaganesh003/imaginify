@@ -26,7 +26,7 @@ export default function RootLayout({
       variables: { colorPrimary: '#624cf5' }
     }}>
       <html lang="en">
-        <body className={cn("font-IBMPlex antialiased h-screen overflow-hidden", IBMPlex.variable)}>
+        <body className={cn("font-IBMPlex antialiased lg:h-screen lg:overflow-hidden", IBMPlex.variable)}>
           {children}
         </body>
       </html>
