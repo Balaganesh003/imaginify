@@ -20,7 +20,7 @@ import { Button } from "../ui/button";
 import { Search } from "./Search";
 
 export const Collection = ({
-  hasSearch = false,
+  hasSearch = true,
   images,
   totalPages = 1,
   page,
